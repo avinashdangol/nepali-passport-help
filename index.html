@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nepali Passport Help Desk · Poland</title>
+<meta name="description" content="Community help desk for Nepalis living in Poland: Nepali passport renewal information, fees, documents, contacts, and chat support.">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: calm, practical support desk — clear and quick to use.
+   IDEA: a real service counter: the customer window and the staff inbox behind it.
+   PICTURE: the live chat window itself, large, at the top.
+   COLOUR and TYPE: white, black, concrete planes, safety yellow only on "waiting for human"; Hanken Grotesk.
+   LAYOUT: modest title + two tabs; customer = one centred chat; agent = inbox list + conversation + FAQ manager. */
+:root{color-scheme:light dark;--bg:light-dark(#f4f8fd,#0b1530);--ink:light-dark(#0f1f45,#e8eefb);--mute:light-dark(#4f5d7a,#a3b0cc);
+--plane:light-dark(#d6e6f7,#1d3466);--soft:light-dark(#e8f1fb,#13234a);--line:light-dark(#c3d4ea,#2a4178);--yel:#f6b40e;--card:light-dark(#ffffff,#0f1d3f);
+--red:#dc143c;--blue:#003893;--navy:#1d3a8a}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Hanken Grotesk",system-ui,sans-serif;overflow-x:clip}
+header{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;padding:16px max(5vw,16px);background:var(--red);color:#fff;border-bottom:6px solid var(--blue)}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:60px;height:60px;border-radius:50%;flex:none;box-shadow:0 0 0 3px #fff}
+.brand small{display:block;font-size:14px;opacity:.9;font-weight:500;margin-top:4px}
+h1{font-size:clamp(22px,3vw,30px);line-height:1.05;margin:0;font-weight:700}
+header .tabs{background:rgba(255,255,255,.18)}header .tabs a{color:#fff}
+h2{font-size:20px;margin:0 0 12px;font-weight:700;color:var(--blue)}
+:root[data-theme=dark] h2{color:#9db8f0}@media(prefers-color-scheme:dark){:root:not([data-theme=light]) h2{color:#9db8f0}}
+.tabs{display:flex;gap:4px;background:var(--soft);padding:4px;border-radius:10px}
+.tabs a{padding:10px 16px;border-radius:8px;color:var(--ink);text-decoration:none;font-weight:500;min-height:44px;display:flex;align-items:center;gap:8px}
+.tabs a[aria-current=page]{background:#fff;color:var(--red)}
+header .tabs a[aria-current=page]{color:var(--red)}
+.badge{background:var(--yel);color:#111;border-radius:99px;font-size:13px;font-weight:700;padding:0 8px;line-height:22px}
+.note{font-size:13px;color:var(--mute);padding:8px max(5vw,16px);background:var(--soft)}
+main{max-width:1240px;margin:0 auto;padding:clamp(20px,3vw,40px) max(5vw,16px)}
+.view[hidden]{display:none}
+/* chat window */
+.win{max-width:720px;margin:0 auto;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);display:flex;flex-direction:column;height:min(640px,calc(100vh - 200px));min-height:440px}
+.wtop{background:var(--blue);color:#fff;border-bottom:4px solid var(--red);padding:14px 18px;display:flex;align-items:center;gap:12px}
+.dot{width:10px;height:10px;border-radius:50%;background:#7bd88f;flex:none}
+.wtop b{font-weight:600}.wtop span{font-size:13px;opacity:.75}
+.msgs{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:10px;background:var(--soft) linear-gradient(transparent 70%,color-mix(in srgb,var(--plane) 60%,transparent))}
+.m{max-width:80%;padding:10px 14px;border-radius:14px;white-space:pre-wrap;overflow-wrap:anywhere}
+.m.fmt{white-space:normal}
+.fmt p{margin:0 0 6px}.fmt p:last-child{margin:0}
+.fmt .h{font-weight:700;color:var(--blue);margin:10px 0 4px;font-size:15px}.fmt .h:first-child{margin-top:0}
+.fmt .ttl{font-weight:700;font-size:16px;margin:0 0 6px}
+.fmt ul{list-style:none;margin:0 0 6px;padding:0}
+.fmt li{padding:5px 0 5px 14px;position:relative;border-bottom:1px solid var(--line)}
+.fmt li:last-child{border-bottom:0}
+.fmt li::before{content:"";position:absolute;left:2px;top:14px;width:5px;height:5px;border-radius:50%;background:var(--red)}
+.fmt li.kv{display:flex;justify-content:space-between;gap:4px 14px;flex-wrap:wrap}
+.fmt .tel,.fmt .nw{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
+.fmt a{color:var(--blue);font-weight:600;overflow-wrap:anywhere}
+.fmt .warn{margin-top:10px;padding:8px 10px;border-radius:8px;background:color-mix(in srgb,var(--yel) 22%,transparent);font-size:14px}
+:root[data-theme=dark] .fmt a,:root[data-theme=dark] .fmt .h{color:#9db8f0}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .fmt a,:root:not([data-theme=light]) .fmt .h{color:#9db8f0}}
+.fitem details{flex:1}.fitem summary{cursor:pointer;font-weight:600;min-height:28px}
+.fitem .fmt{margin-top:8px;font-size:15px;color:var(--ink)}
+.m small{display:block;font-size:13px;color:var(--mute);margin-bottom:2px}
+.m.me{align-self:flex-end;background:var(--red);color:#fff;border-bottom-right-radius:4px}
+.m.me small{color:inherit;opacity:.7}
+.m.bot{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-bottom-left-radius:4px}
+.m.agent{align-self:flex-start;background:var(--plane);border-left:4px solid var(--blue);border-bottom-left-radius:4px}
+.m.sys{align-self:center;background:var(--yel);color:#111;font-size:14px;font-weight:500;border-radius:99px;padding:6px 14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:10px 18px 0;background:var(--card)}
+.chip{border:1px solid var(--line);background:none;color:var(--ink);border-radius:99px;padding:8px 14px;font:inherit;font-size:14px;cursor:pointer;min-height:40px}
+.chip:hover{background:var(--soft)}
+form.send{display:flex;gap:8px;padding:12px 18px 16px;background:var(--card)}
+input,textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-height:44px;width:100%}
+textarea{resize:vertical;min-height:80px}
+input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--yel);outline-offset:2px}
+button.go{font:inherit;font-weight:600;background:var(--red);color:#fff;border:0;border-radius:10px;padding:0 18px;min-height:44px;cursor:pointer;flex:none}
+button.ghost{font:inherit;background:none;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:0 14px;min-height:44px;cursor:pointer}
+button:disabled{opacity:.45;cursor:default}
+/* agent */
+.desk{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:20px;align-items:start}
+.list{border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.filters{display:flex;gap:6px;padding:10px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.filters button{font:inherit;font-size:14px;border:1px solid var(--line);background:none;color:var(--ink);border-radius:99px;padding:6px 12px;cursor:pointer;min-height:36px}
+.filters button[aria-pressed=true]{background:var(--blue);color:#fff;border-color:var(--blue)}
+.row{display:block;width:100%;text-align:left;font:inherit;color:var(--ink);background:none;border:0;border-bottom:1px solid var(--line);padding:12px 14px;cursor:pointer}
+.row:last-child{border-bottom:0}
+.row[aria-current=true]{background:var(--soft)}
+.row b{display:flex;justify-content:space-between;gap:8px;font-weight:600}
+.row p{margin:2px 0 0;font-size:14px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st{font-size:12px;font-weight:700;border-radius:99px;padding:1px 8px;white-space:nowrap;background:var(--plane);color:var(--ink)}
+.st.waiting{background:var(--yel);color:#111}
+.st.human{background:var(--blue);color:#fff}.st.closed{background:var(--plane);color:var(--mute)}
+.case{font-size:12px;font-weight:700;color:var(--red);letter-spacing:.02em}
+.who{font-size:13px;color:var(--mute)}.who.me{color:var(--blue);font-weight:700}
+#search{min-height:40px;font-size:15px;flex:1 1 100%}
+.claim{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:10px 18px;background:var(--soft);border-bottom:1px solid var(--line);font-size:15px}
+.claim b{color:var(--blue)}
+.intake{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px 18px;padding:12px 18px;border-bottom:1px solid var(--line);background:var(--card);font-size:15px}
+.intake span{display:block;font-size:12px;color:var(--mute);font-weight:600}.intake div{overflow-wrap:anywhere}
+.intake .wide{grid-column:1/-1}
+.qlinks{display:flex;gap:8px;overflow-x:auto;padding:10px 14px;background:var(--card);border-bottom:1px solid var(--line);scrollbar-width:thin}
+.qlinks a{flex:none;display:flex;align-items:center;min-height:40px;padding:8px 14px;border-radius:99px;border:1px solid var(--line);color:var(--blue);font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap;background:var(--soft)}
+.newc{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:12px 18px 16px;background:var(--card);font-size:15px}
+.qlinks a:hover{border-color:var(--blue)}
+.qlinks a.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+@media(min-width:700px){.qlinks{flex-wrap:wrap}}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.stats div{padding:10px 8px;text-align:center;border-right:1px solid var(--line)}.stats div:last-child{border-right:0}
+.stats b{display:block;font-size:24px;line-height:1.1;font-variant-numeric:tabular-nums}
+.stats span{font-size:13px;color:var(--mute)}
+.stats .sw b{color:#b07d00}.stats .sp b{color:var(--blue)}.stats .sr b{color:#1f8a4c}
+.st.closed.ok{background:#1f8a4c;color:#fff}
+.fb{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:12px 18px;background:color-mix(in srgb,#1f8a4c 12%,var(--card));border-top:1px solid var(--line);font-weight:600}
+.empty{padding:24px;color:var(--mute);text-align:center}
+.conv{border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:460px;background:var(--card)}
+.conv .msgs{min-height:280px;max-height:460px}
+.reply{padding:14px 18px;display:grid;gap:10px}
+.reply label{display:flex;gap:8px;align-items:center;font-size:14px}
+.reply label input{width:20px;min-height:20px}
+.acts{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.faq{margin-top:40px}
+.faqgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+.fitem{border-bottom:1px solid var(--line);padding:12px 0;display:flex;gap:12px;justify-content:space-between}
+.fitem b{font-weight:600}.fitem p{margin:2px 0 0;font-size:14px;color:var(--mute)}
+.fitem button{flex:none;align-self:start}
+.fform{display:grid;gap:10px;background:var(--soft);padding:18px;border-radius:14px}
+.fform small{color:var(--mute);font-size:13px}
+@media(max-width:760px){.desk,.faqgrid{grid-template-columns:minmax(0,1fr)}.m{max-width:90%}}
+@media(max-width:600px){
+ header{padding:10px 14px;gap:8px}
+ .brand{gap:10px}.brand img{width:42px;height:42px;box-shadow:0 0 0 2px #fff}
+ h1{font-size:19px}.brand small{font-size:12px;margin-top:2px}
+ main{padding:10px 8px}
+ .win{height:calc(100dvh - 120px);min-height:420px;border-radius:12px}
+ .wtop{padding:10px 14px}.wtop img{width:30px!important;height:30px!important}
+ .chips{flex-wrap:nowrap;overflow-x:auto;padding:8px 12px 0}.chip{flex:none;white-space:nowrap}
+ .qlinks{padding:8px 12px}
+ .msgs{padding:12px}
+ form.send{padding:10px 12px 12px}
+ .note{padding:6px 14px}
+}
+
+a.brand{color:inherit;text-decoration:none;border-radius:12px}
+.home{max-width:1080px;margin:0 auto}
+.alert{background:color-mix(in srgb,var(--yel) 22%,var(--card));border:1px solid color-mix(in srgb,var(--yel) 70%,transparent);border-left:6px solid var(--yel);border-radius:12px;padding:14px 18px;margin-bottom:18px}
+.alert b{font-size:17px}.alert p{margin:6px 0 0}
+.hero{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px;align-items:center;background:var(--blue);color:#fff;border-radius:16px;padding:clamp(18px,3vw,32px);border-bottom:6px solid var(--red)}
+.big{font-size:clamp(24px,3.4vw,36px);line-height:1.1;margin:0 0 8px;color:#fff!important;text-wrap:balance}
+.lead{margin:0;opacity:.92;font-size:17px}
+.cta{display:flex;flex-direction:column;gap:10px}
+.btn{display:flex;align-items:center;justify-content:center;text-align:center;min-height:52px;padding:10px 16px;border-radius:12px;font-weight:700;text-decoration:none;font-size:16px}
+.btn.red{background:var(--red);color:#fff}.btn.blue{background:#fff;color:var(--blue)}
+.cta.bottom{margin:22px auto 0;max-width:560px}
+.toc{display:flex;gap:6px;margin:16px 0 0;padding-bottom:4px}
+.toc a{flex:none;padding:8px 14px;border-radius:99px;background:var(--card);border:1px solid var(--line);color:var(--blue);font-weight:600;font-size:14px;text-decoration:none;min-height:38px;display:flex;align-items:center}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;scroll-margin-top:16px}
+.card.wide{grid-column:1/-1}
+.card h3{margin:0 0 10px;font-size:18px;color:var(--blue);padding-bottom:8px;border-bottom:3px solid var(--red);display:inline-block}
+.card p{margin:6px 0}.card .en{color:var(--mute)}
+.card a{color:var(--blue);font-weight:600}
+.fees{width:100%;border-collapse:collapse}.fees td{padding:9px 0;border-bottom:1px solid var(--line);vertical-align:top}.fees td:last-child{text-align:right;font-weight:800;font-size:20px;color:var(--red);white-space:nowrap;padding-left:10px}
+.fees small,.chk small,.qbox small{display:block;color:var(--mute);font-size:13px}
+.note2{font-size:14px;color:var(--mute)}
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.steps li{counter-increment:s;position:relative;padding-left:44px;min-height:32px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.steps li>b{display:block}.toc{overflow-x:auto;scrollbar-width:thin}.steps span{display:block;color:var(--ink);font-size:15px;margin-top:2px}
+.steps.small li{padding-left:40px}.steps.small li::before{width:28px;height:28px;font-size:14px;background:var(--blue)}
+.chk{list-style:none;margin:0;padding:0}.chk li{padding:8px 0 8px 28px;position:relative;border-bottom:1px solid var(--line)}.chk li::before{content:"✓";position:absolute;left:4px;top:8px;color:#1f8a4c;font-weight:800}
+.bank{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;margin:0}.bank dt{color:var(--mute);font-size:14px}.bank dd{margin:0;overflow-wrap:anywhere}
+.mono{font-variant-numeric:tabular-nums;letter-spacing:.02em;white-space:nowrap}
+.copy{font:inherit;font-size:13px;margin-left:6px;padding:4px 10px;border-radius:8px;border:1px solid var(--line);background:var(--soft);color:var(--ink);cursor:pointer;min-height:30px}
+.two{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px}
+.qbox{background:var(--soft);border-radius:12px;padding:14px 16px}.qbox h4{margin:0 0 6px;color:var(--blue)}.qbox ul{margin:0;padding-left:18px}.qbox li{margin:6px 0}
+.cities{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.city h4{margin:0 0 4px;color:var(--blue);font-size:16px;display:flex;justify-content:space-between}.city h4 span{font-size:12px;background:var(--soft);border-radius:99px;padding:2px 8px;color:var(--mute)}
+.city ul{list-style:none;margin:0;padding:0}.city li{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2px 10px;padding:6px 0;border-bottom:1px solid var(--line);font-size:15px}.city li b{white-space:nowrap;font-variant-numeric:tabular-nums}
+.warn2{margin-top:12px!important;padding:8px 12px;border-radius:8px;background:color-mix(in srgb,var(--yel) 22%,transparent);font-size:14px}
+.emb{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 20px}.emb span{display:block;font-size:12px;color:var(--mute);font-weight:600}
+.src{font-size:13px;color:var(--mute);text-align:center;margin:18px 0 4px}
+@media(max-width:760px){.hero,.two,.cards{grid-template-columns:minmax(0,1fr)}.card{padding:16px}}
+body.customer .tabs{display:none}
+body.preview::before{content:'Preview: this is what customers see';position:fixed;bottom:8px;left:50%;transform:translateX(-50%);z-index:9;background:#111;color:#fff;font-size:13px;padding:6px 12px;border-radius:99px;opacity:.85;pointer-events:none}body.customer .note.quiet{display:none}
+@media(prefers-reduced-motion:no-preference){.m{animation:pop .18s ease-out}@keyframes pop{from{opacity:0;transform:translateY(4px)}}}
+
+/* website additions */
+.disc{font-size:13px;color:var(--mute);text-align:center;margin:6px 0 0}
+.talk{display:flex;justify-content:flex-end;padding:6px 18px 0;background:var(--card)}
+.talk button{font:inherit;font-size:14px;font-weight:600;background:none;border:0;color:var(--blue);cursor:pointer;min-height:36px;padding:0 4px;text-decoration:underline}
+.formcard{align-self:stretch;background:var(--card);border:2px solid var(--blue);border-radius:14px;padding:14px 16px;display:grid;gap:10px}
+.formcard b{color:var(--blue)}.formcard p{margin:0;font-size:14px;color:var(--mute)}
+.formcard label{display:grid;gap:4px;font-size:14px;font-weight:600}
+.formcard .row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+@media(max-width:600px){.formcard .row2{grid-template-columns:minmax(0,1fr)}}
+.login{max-width:420px;margin:30px auto;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;display:grid;gap:12px}
+.login h2{margin:0}.login p{margin:0;color:var(--mute);font-size:14px}
+.login .err{color:var(--red);font-weight:600}
+.agentbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:15px}
+.demo{background:var(--yel);color:#111;text-align:center;font-size:14px;font-weight:600;padding:6px 12px}
+</style>
+</head>
+<body>
+<div class="demo" id="demo" hidden>DEMO MODE: Firebase is not connected yet, so nothing is saved. See SETUP.md.</div>
+<header>
+  <a class="brand" href="#home" aria-label="Home"><img src="logo.svg" alt=""><div><h1>Nepali Passport Help Desk</h1><small>पोल्याण्डमा बस्ने नेपालीका लागि · For Nepalis in Poland</small></div></a>
+  <nav class="tabs" aria-label="Views">
+    <a href="#home" id="tHome">Passport info</a>
+    <a href="#customer" id="tCust">Customer chat</a>
+    <a href="#agent" id="tAgent">Agent inbox <span class="badge" id="wcount" hidden>0</span></a>
+  </nav>
+</header>
+<div class="note quiet" id="mode"></div>
+<main>
+  <section class="view home" id="vHome">
+    <div class="alert" role="status">
+      <b>⚠️ राहदानी घुम्ती शिविर स्थगित / Passport camp postponed</b>
+      <p>बर्लिनस्थित नेपाली राजदूतावासको २० नोभेम्बर २०२६ (२०८३ मंसिर ४) को सूचनाअनुसार वार्सामा २७ नोभेम्बर – २ डिसेम्बर २०२६ मा हुने शिविर अर्को सूचना नआएसम्म स्थगित गरिएको छ। नयाँ मिति राजदूतावासको वेबसाइट र आधिकारिक सामाजिक सञ्जालमा आउनेछ।</p>
+      <p>The Warsaw camp planned for 27 Nov – 2 Dec 2026 is postponed until further notice (Embassy of Nepal, Berlin, 20 Nov 2026). Need it urgently? You can go in person to the embassy in Berlin.</p>
+    </div>
+    <div class="hero">
+      <div><h2 class="big">राहदानी नवीकरण — सबै जानकारी एकै ठाउँमा</h2><p class="lead">Everything about renewing your Nepali passport while living in Poland. Questions? Ask our help desk in Nepali or English. A team member steps in when needed.</p></div>
+      <div class="cta"><a class="btn red" href="#customer">💬 प्रश्न सोध्नुहोस् / Ask a question</a><a class="btn blue" href="https://online.nepalpassport.gov.np/" target="_blank" rel="noopener">🛂 Online passport form ↗</a></div>
+    </div>
+    <nav class="toc" aria-label="Sections"><a href="#home" data-go="s-who">Who</a><a href="#home" data-go="s-steps">Steps</a><a href="#home" data-go="s-docs">Documents</a><a href="#home" data-go="s-fees">Fees</a><a href="#home" data-go="s-bank">Bank details</a><a href="#home" data-go="s-check">Payment check</a><a href="#home" data-go="s-contacts">Contacts</a><a href="#home" data-go="s-embassy">Embassy</a></nav>
+    <div class="cards">
+      <article class="card" id="s-who"><h3>को को योग्य? / Who should renew</h3><p>पोल्याण्डमा बस्ने नेपाली, जसको राहदानीको म्याद <b>१ डिसेम्बर २०२७</b> वा सोभन्दा अगावै सकिँदैछ।</p><p class="en">Nepalis living in Poland whose passport expires on or before <b>1 December 2027</b>.</p></article>
+      <article class="card" id="s-fees"><h3>दस्तुर / Fees</h3><table class="fees"><tr><td>३४ पेज विद्युतीय राहदानी नवीकरण<br><small>E-passport renewal, 34 pages</small></td><td>€120</td></tr><tr><td>१० वर्ष मुनिका नाबालक<br><small>Child under 10 (€60 + €25 birth registration)</small></td><td>€85</td></tr><tr><td>हराएको / चोरी / विवरण सच्याउने<br><small>Lost, stolen or data correction</small></td><td>€180</td></tr></table><p class="note2">नवजात शिशुको लागि पहिले नै दूतावासलाई इमेल गर्नुहोस्। / For a newborn, email the embassy first to arrange birth registration.</p></article>
+      <article class="card wide" id="s-steps"><h3>प्रक्रिया / How to apply</h3><ol class="steps">
+        <li><b>अनलाइन फाराम भर्नुहोस् / Fill the online form</b><span><a href="https://online.nepalpassport.gov.np/" target="_blank" rel="noopener">online.nepalpassport.gov.np</a> → Apply for Passport → Renewal/Replacement → <b>Ordinary 34 Page</b>. Appointment Country: <b>Other</b> · Location: <b>NE, Berlin</b>. Barcode सहितको PDF डाउनलोड गरी प्रिन्ट गर्नुहोस्। <a href="https://youtu.be/0C0GsIdUd-Y" target="_blank" rel="noopener">▶️ Video</a></span></li>
+        <li><b>दस्तुर बुझाउनुहोस् / Pay the fee</b><span>Bank transfer to the Embassy of Nepal, Berlin, in your <b>own name</b>, choosing <b>"Sender will pay all the charges"</b>. <a href="https://youtube.com/shorts/Ltll3cNZJ2E" target="_blank" rel="noopener">▶️ Video</a> · ⚠️ शिविर स्थगित छ — नयाँ सूचना पर्खनुहोस्। / Camp postponed: wait for the new notice before paying for it.</span></li>
+        <li><b>फाराम र रसिद पेश गर्नुहोस् / Submit form &amp; receipt</b><span><a href="https://forms.gle/a6jRJhcJnV8VFQX39" target="_blank" rel="noopener">forms.gle/a6jRJhcJnV8VFQX39</a></span></li>
+        <li><b>शिविरमा आफैँ उपस्थित / Attend in person</b><span>प्रिन्ट फाराम, कागजात र रसिद लिएर — नयाँ मिति र स्थानको सूचना पर्खनुहोस्। / Bring the printed form, documents and receipt; new date and place to be announced.</span></li>
+      </ol></article>
+      <article class="card" id="s-docs"><h3>कागजात / Documents</h3><ul class="chk"><li>सक्कल नागरिकता + प्रतिलिपि <small>Original citizenship + copy</small></li><li>सक्कल राहदानी + प्रतिलिपि <small>Original passport + copy</small></li><li>Barcode सहितको अनलाइन फाराम प्रिन्ट <small>Printed online form with barcode</small></li><li>नाबालक: परिचयपत्र + बाबुआमाको नागरिकता प्रतिलिपि <small>Minors: minor ID + parents' citizenship copies</small></li></ul><p class="note2">अनलाइन फाराममा अपलोड: नागरिकताको दुवै भाग, राहदानीको फोटो पेज, Next of Kin पेज। / Upload both sides of citizenship, passport photo page and next-of-kin page.</p></article>
+      <article class="card" id="s-bank"><h3>बैंक विवरण / Embassy bank details</h3><dl class="bank"><dt>Beneficiary</dt><dd>Embassy of Nepal</dd><dt>Bank</dt><dd>Commerzbank Berlin</dd><dt>IBAN</dt><dd><b class="mono">DE79 1004 0000 0266 0207 00</b> <button type="button" class="copy" data-copy="DE79100400000266020700">Copy</button></dd><dt>SWIFT</dt><dd class="mono">COBADEFFXXX</dd><dt>BLZ</dt><dd class="mono">100 400 00</dd><dt>Reference</dt><dd>Passport No. / Name of the Applicant</dd></dl><p class="note2">Always double-check bank details in the official embassy notice before paying.</p></article>
+      <article class="card wide" id="s-check"><h3>पैसा दूतावास पुग्यो कि पुगेन? / Did your payment reach the embassy?</h3><div class="two">
+        <ol class="steps small"><li><b>बैंकमा फोन / Call your bank</b><span>Transfer Date याद गर्नुहोस्। बर्लिनस्थित नेपाली दूतावासको खातामा पैसा पुग्यो कि पुगेन जाँच गर्न अनुरोध गर्नुहोस्।</span></li><li><b>Security Check</b><span>बैंकले ३–४ प्रश्न सोध्छ — सही जवाफ दिनुहोस्। / Answer the bank's 3–4 questions.</span></li><li><b>फोन नआए आफैँ फोन / Call again</b><span>If the bank doesn't call back when promised.</span></li><li><b>अन्तिम जानकारी / Final answer</b><span>पैसा दूतावासको खातामा पठाइयो कि भएन स्पष्ट सोध्नुहोस्।</span></li><li><b>दूतावासलाई इमेल / Email the embassy</b><span>berlin@nepalembassy.de: ask them to confirm they received it. Keep your <b>Outgoing Payment Order</b>.</span></li></ol>
+        <div class="qbox"><h4>बैंकले सोध्न सक्ने प्रश्न / Questions the bank may ask</h4><ul><li>रकम पठाउनुको उद्देश्य <small>Purpose: passport renewal at the Embassy of Nepal, Berlin</small></li><li>एकपटकको भुक्तानी? <small>Is it a one-time payment?</small></li><li>रकमको स्रोत <small>Source of funds (e.g. salary)</small></li><li>रोजगारी / व्यवसाय <small>Employment or own business</small></li></ul><p class="note2">एक जना समुदाय सदस्यको अनुभव। आफ्नो साँचो विवरण अनुसार जवाफ दिनुहोस्। / One member's experience: answer truthfully with your own details.</p></div></div></article>
+      <article class="card wide" id="s-contacts"><h3>सम्पर्क व्यक्ति / Contact persons</h3><p class="note2">राजदूतावासको सूचनामा दिइएका सम्पर्क व्यक्तिहरू / Contact persons listed in the embassy notice</p><div class="cities" id="cities"></div><p class="warn2">⚠️ सहयोग निःशुल्क हो। सहयोगको नाममा पैसा माग्नेलाई रिपोर्ट गर्नुहोस्। / Help is free of charge. Report anyone who asks for money.</p></article>
+      <article class="card wide" id="s-embassy"><h3>नेपाली राजदूतावास, बर्लिन / Embassy of Nepal, Berlin</h3><div class="emb"><div><span>Address</span>Guerickestrasse 27, 10587 Berlin, Germany</div><div><span>Phone</span><b class="mono">+49 (030) 34 35 99-20</b></div><div><span>Email</span><b>berlin@nepalembassy.de</b></div><div><span>Website</span><a href="https://de.nepalembassy.gov.np" target="_blank" rel="noopener">de.nepalembassy.gov.np ↗</a></div><div><span>Updates</span>WhatsApp channel "Passport Camp – Poland 2026" (QR code in the embassy notice)</div></div><p class="note2">आधिकारिक सूचना मात्र विश्वास गर्नुहोस्। / Trust only official notices.</p></article>
+    </div>
+    <div class="cta bottom"><a class="btn red" href="#customer">💬 अझै प्रश्न छ? सोध्नुहोस् / Still have a question? Ask here</a></div>
+    <p class="src">स्रोत / Source: Embassy of Nepal, Berlin notices (Poland Passport Camp 2026; postponement of 20 Nov 2026). Updated 21 Nov 2026.</p>
+    <p class="disc">This is a volunteer community help desk, <b>not</b> an official website of the Embassy of Nepal or the Government of Nepal. Always follow the official embassy notices.</p>
+  </section>
+
+  <section class="view" id="vCust" hidden>
+    <div class="win">
+      <div class="wtop"><img src="logo.svg" alt="" style="width:36px;height:36px;border-radius:50%;flex:none"><div><b>Nepali Passport Help Desk</b><br><span id="cstatus">Instant answers · a team member steps in if needed</span></div></div>
+      <nav class="qlinks" aria-label="Quick links">
+        <a href="#home">ℹ️ सबै जानकारी / All info</a>
+        <a href="https://online.nepalpassport.gov.np/" target="_blank" rel="noopener" class="primary">🛂 अनलाइन राहदानी फाराम / Online passport form ↗</a>
+        <a href="https://forms.gle/a6jRJhcJnV8VFQX39" target="_blank" rel="noopener">📄 फाराम र रसिद पेश / Submit form &amp; receipt ↗</a>
+        <a href="https://de.nepalembassy.gov.np" target="_blank" rel="noopener">🏛️ Embassy Berlin ↗</a>
+      </nav>
+      <div class="msgs" id="cmsgs" aria-live="polite"></div>
+      <div class="fb" id="fb" hidden><span>समस्या समाधान भयो? / Was your problem solved?</span><div class="acts"><button type="button" class="go" data-fb="yes">✓ हो / Yes</button><button type="button" class="ghost" data-fb="no">छैन / Not yet</button></div></div>
+      <div class="chips" id="chips"></div>
+      <div class="talk" id="talk"><button type="button" id="talkbtn">👤 व्यक्तिसँग कुरा गर्नुहोस् / Talk to a person</button></div>
+      <div class="newc" id="newc" hidden><span>यो केस बन्द भयो। नयाँ प्रश्न छ? / This case is closed. Have a new question?</span><button type="button" class="go" id="newcase">+ नयाँ केस / Start a new case</button></div>
+      <form class="send" id="cform"><input id="cin" placeholder="Type your question…" autocomplete="off" aria-label="Your message" maxlength="1000"><button class="go">Send</button></form>
+    </div>
+    <p class="disc">Volunteer community help desk, not an official embassy service. Don't share passport numbers, bank details or passwords here.</p>
+  </section>
+
+  <section class="view" id="vAgent" hidden>
+    <form class="login" id="login" hidden>
+      <h2>Agent login</h2>
+      <p>Only for help desk team members. Customers don't need to log in.</p>
+      <input id="lemail" type="email" placeholder="Email" autocomplete="username" required aria-label="Email">
+      <input id="lpass" type="password" placeholder="Password" autocomplete="current-password" required aria-label="Password">
+      <p class="err" id="lerr" hidden></p>
+      <button class="go" id="lbtn">Log in</button>
+      <p id="ldemo" hidden>Demo mode: type any email and password.</p>
+    </form>
+    <div id="inbox" hidden>
+      <div class="agentbar"><span>Logged in as <b id="meName">Agent</b></span><button type="button" class="ghost" id="logout">Log out</button></div>
+      <div class="desk">
+        <div class="list">
+          <div class="stats" id="stats"></div>
+          <div class="filters" id="filters">
+            <input id="search" type="search" placeholder="Search case no., name or text" aria-label="Search cases">
+            <button data-f="basket" aria-pressed="true">Workbasket</button>
+            <button data-f="mine" aria-pressed="false">My cases</button>
+            <button data-f="recent" aria-pressed="false">Recent work</button>
+            <button data-f="closed" aria-pressed="false">Resolved</button>
+          </div>
+          <div id="rows"></div>
+        </div>
+        <div class="conv">
+          <div class="wtop"><div><b id="aname">Pick a case</b><br><span id="ameta">All open cases are in the Workbasket. Unassigned ones are on top.</span></div></div>
+          <div class="claim" id="claim" hidden></div>
+          <div class="intake" id="intake" hidden></div>
+          <div class="msgs" id="amsgs"></div>
+          <form class="reply" id="aform">
+            <textarea id="ain" placeholder="Write your answer to the customer…" aria-label="Agent reply" disabled></textarea>
+            <label><input type="checkbox" id="teach"> Also save this as an automatic answer</label>
+            <div class="acts"><button type="button" class="ghost" id="close" disabled>Mark resolved</button><button class="go" id="asend" disabled>Send reply</button></div>
+          </form>
+        </div>
+      </div>
+      <section class="faq">
+        <h2>Automatic answers</h2>
+        <div class="faqgrid">
+          <div id="flist"></div>
+          <form class="fform" id="fform">
+            <b id="fhead">Add a question and answer</b>
+            <input id="fq" placeholder="Question, e.g. How long does renewal take?" required aria-label="Question">
+            <input id="fk" placeholder="Keywords (English, Nepali, romanized), e.g. time kati din samay" aria-label="Keywords">
+            <textarea id="fa" placeholder="Answer" required aria-label="Answer"></textarea>
+            <small>The help desk matches the customer's words to the question and keywords. More keywords = better matching. Lines starting with • become a list; a line ending with : becomes a heading.</small>
+            <div class="acts"><button type="button" class="ghost" id="fcancel" hidden>Cancel edit</button><button class="go">Save</button></div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

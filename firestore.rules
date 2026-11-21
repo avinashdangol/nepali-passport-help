@@ -1,0 +1,37 @@
+rules_version = '2';
+// Nepali Passport Help Desk — Firestore security rules.
+// Paste this whole file into: Firebase console → Firestore Database → Rules → Publish.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // An agent is a signed-in (non-anonymous) user whose uid has a document in /agents.
+    function isAgent() {
+      return request.auth != null
+        && exists(/databases/$(database)/documents/agents/$(request.auth.uid));
+    }
+
+    // Agents list: agents can read it (to show names). Only you, the admin, add agents in the console.
+    match /agents/{uid} {
+      allow read: if isAgent();
+      allow write: if false;
+    }
+
+    // One chat document per customer (document id = the customer's anonymous user id).
+    // Customers can only read/write their OWN chat. Agents can read/write all chats.
+    match /chats/{uid} {
+      allow read, write: if (request.auth != null && request.auth.uid == uid) || isAgent();
+      allow delete: if isAgent();
+    }
+
+    // Automatic answers: everyone can read; only agents can add or edit.
+    match /faq/{id} {
+      allow read: if true;
+      allow write: if isAgent();
+    }
+
+    // Everything else is closed.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
