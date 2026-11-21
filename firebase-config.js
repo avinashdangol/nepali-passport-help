@@ -1,18 +1,12 @@
-// STEP 4 of SETUP.md: paste your Firebase web app config here.
-// Firebase console → Project settings → Your apps → Web app → "SDK setup and configuration" → Config.
+// Firebase web app config for the Nepali Passport Help Desk.
 // These values are not secret; your data is protected by the rules in firestore.rules.
-//
-// While this is null, the website runs in DEMO MODE (nothing is saved, data stays in your browser tab).
+// To go back to DEMO MODE, replace the object below with: null
 
-export const firebaseConfig = null;
-
-/* Example — replace null above with your own values:
 export const firebaseConfig = {
-  apiKey: "AIza...",
-  authDomain: "your-project.firebaseapp.com",
-  projectId: "your-project",
-  storageBucket: "your-project.firebasestorage.app",
-  messagingSenderId: "1234567890",
-  appId: "1:1234567890:web:abc123"
+  apiKey: "AIzaSyAX5uBGx9-FaV33h6-J2gn_5inYL4xLW68",
+  authDomain: "nepali-passport-help.firebaseapp.com",
+  projectId: "nepali-passport-help",
+  storageBucket: "nepali-passport-help.firebasestorage.app",
+  messagingSenderId: "1019329586654",
+  appId: "1:1019329586654:web:1456382d586e76f2a0294f"
 };
-*/
