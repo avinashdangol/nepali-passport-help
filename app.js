@@ -55,9 +55,13 @@ const words = t => [...new Set(String(t).toLowerCase().replace(/[^\p{L}\p{M}\p{N
 function answerFor(text) {
   const t = text.trim().toLowerCase();
   const Q = words(text);
+  const GREET = /^(hi+|hii+|hello+|helo+|hlo+|hey+|heya|hy|hyy|namaste|namaskar|नमस्ते|नमस्कार|good|morning|evening|afternoon|dai|didi|bhai|sir|madam|ji|there|all|everyone|ko|cha|xa|k)$/;
+  const tokens = t.replace(/[^\p{L}\p{M}\p{N}\s]/gu, ' ').split(/\s+/).filter(Boolean);
+  if (tokens.length && tokens.length <= 5 && tokens.every(w => GREET.test(w)))
+    return 'नमस्ते! आज राहदानी नवीकरण सम्बन्धी के मद्दत गरौँ?\n\nHello! How can we help you regarding passport renewal today?';
   if (!Q.length) {
     if (/(thank|dhanyabad|धन्यवाद)/.test(t)) return 'धन्यवाद! अरू केही सोध्नु छ? / You are welcome! Anything else?';
-    if (/(hi|hello|hey|namaste|नमस्ते|good (morning|evening|afternoon))/.test(t)) return 'नमस्ते! के मद्दत गरौँ? / Hello! What can I help you with?';
+    if (/(hi|hello|hey|namaste|नमस्ते|good (morning|evening|afternoon))/.test(t)) return 'नमस्ते! आज राहदानी नवीकरण सम्बन्धी के मद्दत गरौँ?\n\nHello! How can we help you regarding passport renewal today?';
     return null;
   }
   let best = null, score = 0, bh = 0;
