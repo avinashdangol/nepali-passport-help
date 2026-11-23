@@ -16,7 +16,7 @@ const newCase = () => { const d = new Date(); return 'NP-' + String(d.getMonth()
 
 function inl(s) {
   return esc(s)
-    .replace(/https?:\/\/[^\s<]+/g, u => `<a href="${u}" target="_blank" rel="noopener">${u.replace(/^https?:\/\//, '').replace(/\/$/, '')}</a>`)
+    .replace(/https?:\/\/[^\s<]+/g, u => `<a href="${u}" target="_blank" rel="noopener">${/script\.google\.com/.test(u) ? '✅ Payment status list ↗' : u.replace(/^https?:\/\//, '').replace(/\/$/, '')}</a>`)
     .replace(/[\w.+-]+@[\w-]+\.[\w.]+\w/g, m => `<span class="nw">${m}</span>`)
     .replace(/\+\d[\d ()\-]{7,}\d/g, m => `<span class="tel">${m}</span>`);
 }
